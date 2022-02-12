@@ -1,0 +1,28 @@
+<apex:page controller="AssignControllerEdit" docType="html-5.0">
+    <apex:form >
+        <apex:pageBlock title="Assign custom metadata" mode="edit">
+            <apex:pageMessages />
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!assignData}" var="data">
+                <apex:column value="{!data.MasterLabel}"/>
+                <apex:column headerValue="Better is Better">
+                    <apex:inputCheckbox value="{!data.Better_is_Better__c}"/>
+                </apex:column>
+                <apex:column headerValue="Equal time distribution importance">
+                    <apex:inputText value="{!data.Equal_time_distribution_importance__c}"/>
+                </apex:column>
+                    <apex:column headerValue="Maximum Expert Bonus">
+                    <apex:inputText value="{!data.Maximum_Expert_Bonus__c}"/>
+                </apex:column>
+                    <apex:column headerValue="Minimum Sub Rating Ratio">
+                    <apex:inputText value="{!data.Minimum_Sub_Rating_Ratio__c}"/>
+                </apex:column>
+                    <apex:column headerValue="Sales Rep Profile">
+                    <apex:inputText value="{!data.Sales_Rep_Profile__c}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
